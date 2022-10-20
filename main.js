@@ -30,6 +30,7 @@ function UserTable({ content, form, addBtn, userInfo, localStorageKeyName }) {
                 });
             }
             form.reset();
+            form.elements['id'].value = '';
             form.classList.remove('open');
         });
     };
