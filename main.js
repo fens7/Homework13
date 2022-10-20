@@ -7,6 +7,7 @@ function UserTable({ content, form, addBtn, userInfo, localStorageKeyName }) {
 
     this.formOpen = function () {
         addBtn.addEventListener('click', function () {
+            form.elements['id'].value = '';
             form.classList.add('open');
         });
     };
@@ -30,7 +31,6 @@ function UserTable({ content, form, addBtn, userInfo, localStorageKeyName }) {
                 });
             }
             form.reset();
-            form.elements['id'].value = '';
             form.classList.remove('open');
         });
     };
